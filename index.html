@@ -1,94 +1,146 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="bumblebee">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+	<title>Portfolio</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
-    <!--- Tailwind CSS & Daisy UI CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.18.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Favicon -->
-    <link rel="icon" href="res/favicon.svg">
-    <title>Todo List</title>
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+	<meta name="author" content="Tauseef Kazi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+	<body>
+		<!-- Navbar -->
+		<nav class="nav container void-background">
+			<!-- This "nav-menu" is hidden on mobile -->
+			<!-- Add the modifier "is-active" to display it on mobile -->
+			<div class="nav-left">
+				<a href="" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-medium"></i>
+					</span>
+				</a>
+				<a href="" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a href="" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-twitter"></i>
+					</span>
+				</a>				
+			</div>
 
-<body>
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="#about">About</a>
+				<a class="nav-item" href="#projects">Projects</a>
+				<a class="nav-item" href="#social">Social</a>
+			</div>
 
-    <!-- Copyright -->
-    <div class="author-text">
-        <p>Made with 💻
-            by <a href="https://github.com/zeus-anuj" target="_blank">
-                <b>Tauseef Kazi</b>
-            </a>
-        </p>
-    </div>
+			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+			<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+				
+		<!-- About Me -->
+	
+		<section id="about" class="section section-1">
+				
 
-    <div class="container">
-        <header>
-            <h1>Todo List</h1>
-            <!-- Error message -->
-            <div class="alert-message">
+				
+			<div class="container has-text-centered">
+				<h1 class="title is-3">Tauseef Kazi</h1>
+				<!-- Source: https://flic.kr/p/pAZBNK -->
+				<img class="avatar" src="assets/img/profile.png">
+			</div>
+			<div class="container"></br>
+				<p class="intro">
+					As an MCA student with a passion for technology and software development, I am seeking opportunities to leverage my
+skills and knowledge to contribute to the growth and success of a forward-thinking organization. With a strong
+academic foundation and hands-on experience in various programming languages and software development
+methodologies, I am equipped to tackle complex challenges in the digital realm. I am a quick learner, adaptable, and
+thrive in collaborative environments that foster innovation and continuous learning.
+				</p>
+			</div>
+		</section>
+		
+		<!-- Projects -->
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="has-text-centered">
+					<h3 class="title is-3">Projects</h3>
+				</div>
+				
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<img src="assets/img/project-1.jpg" alt="Image">
+									</figure>
+								</div>
+								<div>			
+									<p>
+										 movie ticket booking system this is online website is made by using html,css and php.....
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<img src="assets/img/project-2.jpg" alt="Image">
+									</figure>
+								</div>
+								<div>			
+									<p>
+										company database management system
+									this site is mainly handled all informationn about company ....
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            </div>
-
-            <div class="input-section">
-                <input type="text" placeholder="Add a todo . . ."
-                    class="input input-bordered input-secondary w-full max-w-xs" />
-                <button class="btn btn-secondary add-task-button">
-                    <i class="bx bx-plus bx-sm"></i>
-                </button>
-            </div>
-        </header>
-
-        <div class="todos-filter">
-            <!-- <div class="dropdown">
-                <label tabindex="0" class="btn m-1">Filter</label>
-                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>All</a></li>
-                    <li><a>Pending</a></li>
-                    <li><a>Completed</a></li>
-                </ul>
-            </div> -->
-
-            <button class="btn btn-secondary delete-all-btn">
-                Delete All
-            </button>
-        </div>
-
-        <ul class="todos-list">
-
-        </ul>
-    </div>
-
-    <!--Theme switcher-->
-    <div class="theme-switcher">
-        <div class="dropdown dropdown-left">
-            <label tabindex="0" class="btn m-1">
-                <i class='bx bxs-palette bx-sm'></i>
-            </label>
-            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-               
-                <li class="theme-item" theme="dark"><a>dark</a></li>
-                <li class="theme-item" theme="light"><a>light</a></li>
-                <li class="theme-item" theme="bumblebee"><a>bumblebee</a></li>
-                <li class="theme-item" theme="synthwave"><a>synthwave</a></li>
-                <li class="theme-item" theme="halloween"><a>halloween</a></li>
-                <li class="theme-item" theme="fantasy"><a>fantasy</a></li>
-                <li class="theme-item" theme="dracula"><a>dracula</a></li>
-                <li class="theme-item" theme="aqua"><a>aqua</a></li>
-                <li class="theme-item" theme="luxury"><a>luxury</a></li>
-                <li class="theme-item" theme="night"><a>night</a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- JS -->
-    <script src="js/main.js"></script>
-    <script src="js/theme_switcher.js"></script>
-</body>
-
+		<!-- Social -->
+		<section id="social" class="section section-3">
+			<div class="container">
+				<div class="has-text-centered">					
+					<h3 class="title is-3">Let's Socialize</h3>
+				</div>
+				<div class="social-container columns">
+					<div class="column is-6 has-text-centered">
+						<a target="_blank" href=""><img class="" src="assets/img/linkedin.png"></a>
+					</div>
+					<div class="column is-6 has-text-centered">
+						<a target="_blank" href=""><img class="" src="assets/img/facebook.png"></a>
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<!-- Footer -->
+		<section class="section-4 has-text-centered container">
+			<a href="">Tauseef Kazi</a>
+		</section>
+		
+		<!-- Scripts  -->
+		<script src="controller.js"></script>		
+	</body>	
 </html>
